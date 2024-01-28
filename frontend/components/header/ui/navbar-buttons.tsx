@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import { Search } from 'lucide-react'
-import { IoMdLogIn } from 'react-icons/io'
+import { FaRegUser } from 'react-icons/fa'
 import { MdOutlineShoppingBag } from 'react-icons/md'
 
 const NavbarButtons = () => {
@@ -13,7 +13,7 @@ const NavbarButtons = () => {
         <Search size={20} />
       </Link>
       <Link href={'/sign-in'}>
-        <IoMdLogIn color={'black'} size={22} />
+        <FaRegUser color={'black'} size={20} />
       </Link>
       <Link href={'/'} className={'flex items-center gap-1'}>
         <MdOutlineShoppingBag color={'black'} size={22} />
