@@ -50,7 +50,7 @@ const SignIn = () => {
                 autoComplete="off"
                 placeholder={'Your username or email'}
                 className={
-                  '!outline-none focus:!bg-transparent w-[456px]  max-lg:w-full focus:!border-b-[#000] focus:!transition focus:placeholder:!text-[#000] !border-b-2 !border-b-[#CBCBCB] pb-[13px] placeholder:text-[#A7A7A7]'
+                  '!outline-none focus:!bg-transparent w-[456px] max-lg:w-full focus:!border-b-[#000] focus:!transition focus:placeholder:!text-[#000] !border-b-2 !border-b-[#CBCBCB] pb-[13px] placeholder:text-[#A7A7A7]'
                 }
               />
               <div className={'relative'}>

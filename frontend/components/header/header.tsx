@@ -25,12 +25,8 @@ const Header = () => {
       <NavbarMessages />
       <Container>
         <header className={'mt-[16px] flex items-center justify-between relative'}>
-          <div>
-            <NavbarLogo />
-          </div>
-          <div>
-            <NavbarLinks />
-          </div>
+          <NavbarLogo />
+          <NavbarLinks />
           <div>
             <NavbarButtons />
             <div className={'flex items-center gap-2'}>

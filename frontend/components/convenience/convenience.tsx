@@ -7,7 +7,6 @@ const Convenience = () => {
   return (
     <Container>
       <div className={'mt-[100px]'}>
-        <div>
           {ConvenienceData?.map((Convenience: any, index) => (
             <div key={index} className={'flex items-center justify-between flex-wrap gap-y-2 max-lg:justify-between max-lg:gap-5 max-[320px]:justify-center'}>
               <div>{Convenience?.Convenience1}</div>
@@ -16,7 +15,6 @@ const Convenience = () => {
               <div>{Convenience?.Convenience4}</div>
             </div>
           ))}
-        </div>
       </div>
     </Container>
   )
