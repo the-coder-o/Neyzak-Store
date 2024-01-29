@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,8 +13,17 @@ import Container from '@/components/container/container'
 import GoogleIcon from '@/assets/auth/google.png'
 import FaceBookIcon from '@/assets/auth/facebook.png'
 import NeyzakSecondLogo from '@/assets/general/second-logo.svg'
+import { Eye, EyeOff } from 'lucide-react'
 
 const SignUp = () => {
+  const [password, setPassword] = useState<string>('')
+  const [showPassword, setShowPassword] = useState<boolean>(false)
+
+  const handleTogglePassword = (e: any) => {
+    e.preventDefault()
+    setShowPassword(!showPassword)
+  }
+
   return (
     <div className={'grid grid-cols-2 max-md:grid-cols-1 relative'}>
       <div>
@@ -34,8 +45,26 @@ const SignUp = () => {
               </p>
             </div>
             <form className={'flex flex-col gap-[32px] max-md:gap-[25px] max-[465px]:gap-[10px]'}>
-              <input placeholder={'Your username or email'} className={'!outline-none w-[456px] max-lg:w-full !border-b-2 !border-b-[#CBCBCB] pb-[13px] placeholder:text-[#A7A7A7]'} />
-              <input placeholder={'Password'} className={'!outline-none w-[456px] max-lg:w-full !border-b-2 !border-b-[#CBCBCB] pb-[13px] placeholder:text-[#A7A7A7]'} />
+              <input
+                autoComplete="off"
+                placeholder={'Your username or email'}
+                className={
+                  '!outline-none focus:!bg-transparent w-[456px] focus:!border-b-[#000] focus:!transition focus:placeholder:!text-[#000] max-lg:w-full !border-b-2 !border-b-[#CBCBCB] pb-[13px] placeholder:text-[#A7A7A7]'
+                }
+              />
+              <div className={'relative'}>
+                <div onClick={handleTogglePassword}>{showPassword ? <Eye className={'absolute right-2 cursor-pointer'} /> : <EyeOff className={'absolute right-2 cursor-pointer'} />}</div>
+                <input
+                  autoComplete="off"
+                  placeholder={'Password'}
+                  type={showPassword ? 'password' : 'text'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className={
+                    '!outline-none w-[456px] focus:!border-b-[#000] focus:!transition focus:placeholder:!text-[#000] max-lg:w-full !border-b-2 !border-b-[#CBCBCB] pb-[13px] placeholder:text-[#A7A7A7]'
+                  }
+                />
+              </div>
               <div className={'flex items-center justify-between'}>
                 <div className="flex items-center space-x-2">
                   <Checkbox id="terms" />

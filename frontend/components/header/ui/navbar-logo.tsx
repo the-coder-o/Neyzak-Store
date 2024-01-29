@@ -10,7 +10,7 @@ const NavbarLogo = () => {
     <>
       <div>
         <Link href={'/'}>
-          <Image width={0} height={0} src={NeyzakLogo} alt={NeyzakLogo} className={'!w-[155px]'} />
+          <Image width={0} height={0} src={NeyzakLogo} alt={NeyzakLogo} className={'!w-[155px] max-[820px]:!w-[140px]'} />
         </Link>
       </div>
     </>
